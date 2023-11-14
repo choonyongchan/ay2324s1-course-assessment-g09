@@ -3,6 +3,8 @@ services:
   question-service:
     container_name: question-service
     image: question-service-img
+    environment:
+      - DB_URL=mongodb://mongo:27017/question-service
     restart: always
     build: .
     ports:
